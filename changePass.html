@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đổi mật khẩu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .changePass-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            position: relative;
+        }
+
+        .back-page {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+            color: #007bff;
+            display: flex;
+            align-items: center;
+        }
+
+        .back-page i {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+
+        .back-page:hover {
+            text-decoration: underline;
+        }
+
+        .changePass-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .changePass-container p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .changePass-container input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 20px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .changePass-container button {
+            width: 100%;
+            background-color: #da2733;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .changePass-container button:hover {
+            background-color: #c1212d;
+        }
+    </style>
+</head>
+<body>
+    <div class="changePass-container">
+        <div id="eventback" class="back-page" onclick="backHistoryPage()">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            <span>Quay lại</span>
+        </div>
+        <h2>Quên mật khẩu</h2>
+        <p>Để khôi phục mật khẩu, bạn vui lòng nhập Số điện thoại đã dùng để đăng ký trên hệ thống.</p>
+        <form action="#" method="POST">
+            <input type="text" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+            <button type="submit">KHÔI PHỤC MẬT KHẨU</button>
+        </form>
+    </div>
+    <script>
+        function backHistoryPage() {
+            if (window.history.length > 1) {
+                window.history.back(); // Quay lại trang trước đó
+            } else {
+                alert("Không có trang trước để quay lại."); // Thông báo nếu không có lịch sử
+            }
+        }
+    </script>
+</body>
+</html>
